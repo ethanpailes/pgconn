@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jackc/pgconn/internal/ctxwatch"
+	"github.com/ethanpailes/pgconn/internal/ctxwatch"
 	"github.com/jackc/pgio"
 	"github.com/jackc/pgproto3/v2"
 	errors "golang.org/x/xerrors"
@@ -297,7 +297,7 @@ func connect(ctx context.Context, config *Config, fallbackConfig *FallbackConfig
 				// the watch already in progress panic. This is that last thing done by this method so there is no need to
 				// restart the watch after ValidateConnect returns.
 				//
-				// See https://github.com/jackc/pgconn/issues/40.
+				// See https://github.com/ethanpailes/pgconn/issues/40.
 				pgConn.contextWatcher.Unwatch()
 
 				err := config.ValidateConnect(ctx, pgConn)
@@ -539,7 +539,7 @@ func (pgConn *PgConn) Close(ctx context.Context) error {
 		// a defer closes the connection (possibly indirectly via a transaction or a connection pool). Unwatch to end any
 		// previous watch. It is safe to Unwatch regardless of whether a watch is already is progress.
 		//
-		// See https://github.com/jackc/pgconn/issues/29
+		// See https://github.com/ethanpailes/pgconn/issues/29
 		pgConn.contextWatcher.Unwatch()
 
 		pgConn.contextWatcher.Watch(ctx)

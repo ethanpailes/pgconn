@@ -19,7 +19,7 @@ import (
 
 	"github.com/jackc/pgmock"
 
-	"github.com/jackc/pgconn"
+	"github.com/ethanpailes/pgconn"
 	"github.com/jackc/pgproto3/v2"
 	errors "golang.org/x/xerrors"
 
@@ -1592,7 +1592,7 @@ func TestConnCopyFromQueryNoTableError(t *testing.T) {
 	ensureConnValid(t, pgConn)
 }
 
-// https://github.com/jackc/pgconn/issues/21
+// https://github.com/ethanpailes/pgconn/issues/21
 func TestConnCopyFromNoticeResponseReceivedMidStream(t *testing.T) {
 	t.Parallel()
 

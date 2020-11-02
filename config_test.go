@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jackc/pgconn"
+	"github.com/ethanpailes/pgconn"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -528,7 +528,7 @@ func TestParseConfig(t *testing.T) {
 	}
 }
 
-// https://github.com/jackc/pgconn/issues/47
+// https://github.com/ethanpailes/pgconn/issues/47
 func TestParseConfigDSNWithTrailingEmptyEqualDoesNotPanic(t *testing.T) {
 	_, err := pgconn.ParseConfig("host= user= password= port= database=")
 	require.NoError(t, err)
@@ -539,7 +539,7 @@ func TestParseConfigDSNLeadingEqual(t *testing.T) {
 	require.Error(t, err)
 }
 
-// https://github.com/jackc/pgconn/issues/49
+// https://github.com/ethanpailes/pgconn/issues/49
 func TestParseConfigDSNTrailingBackslash(t *testing.T) {
 	_, err := pgconn.ParseConfig(`x=x\`)
 	require.Error(t, err)
