@@ -1,4 +1,4 @@
-[![](https://godoc.org/github.com/jackc/pgconn?status.svg)](https://godoc.org/github.com/jackc/pgconn)
+[![](https://godoc.org/github.com/ethanpailes/pgconn?status.svg)](https://godoc.org/github.com/ethanpailes/pgconn)
 [![Build Status](https://travis-ci.org/jackc/pgconn.svg)](https://travis-ci.org/jackc/pgconn)
 
 # pgconn

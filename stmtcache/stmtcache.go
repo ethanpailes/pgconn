@@ -4,7 +4,7 @@ package stmtcache
 import (
 	"context"
 
-	"github.com/jackc/pgconn"
+	"github.com/ethanpailes/pgconn"
 )
 
 const (

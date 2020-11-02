@@ -3,7 +3,7 @@ package pgconn_test
 import (
 	"testing"
 
-	"github.com/jackc/pgconn"
+	"github.com/ethanpailes/pgconn"
 	"github.com/stretchr/testify/assert"
 )
 

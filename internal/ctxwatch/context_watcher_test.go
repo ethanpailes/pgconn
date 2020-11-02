@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jackc/pgconn/internal/ctxwatch"
+	"github.com/ethanpailes/pgconn/internal/ctxwatch"
 	"github.com/stretchr/testify/require"
 )
 
